@@ -21,3 +21,11 @@ Instead of using routes.yaml, you can write the route right above the method lik
          return new Response('Whet a bewitching controller we have conjured!');
       }
    }
+
+
+------------- 09 -------------
+Twig has two syntaxes:
+"say something": {{ code that prints something }}
+"do something": {% whatever you need to do %}
++
+comment: {# comment here #}
