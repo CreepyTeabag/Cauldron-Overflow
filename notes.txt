@@ -1,0 +1,23 @@
+------------- 03 -------------
+A route defines the URL of the page.
+
+The controller is where we write PHP code to build that page
+(ie: HTML, JSON)
+
+routes.yaml
+   index:
+      path: / - if we go to this page
+      controller: App\Controller\DefaultController::index - execute index method on DefaultController class.
+
+The only rule of a Symfony controller method (or "action") is that it must return a Symfony Response object.
+
+------------- 04 -------------
+Instead of using routes.yaml, you can write the route right above the method like this:
+   class QuestionController {
+      /**
+      * @Route("/")
+      */
+      public function homepage() {
+         return new Response('Whet a bewitching controller we have conjured!');
+      }
+   }
