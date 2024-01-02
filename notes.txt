@@ -22,10 +22,23 @@ Instead of using routes.yaml, you can write the route right above the method lik
       }
    }
 
-
 ------------- 09 -------------
 Twig has two syntaxes:
 "say something": {{ code that prints something }}
 "do something": {% whatever you need to do %}
 +
 comment: {# comment here #}
+
+------------- 10 -------------
+dump($slug, $this);
+dd($slug, $this);
+
+Both of these will print the variables in a very convenient form right on the page. dd will also die afterwards (it means Dump and Die).
+
+If we use debug bundle (composer require debug), then all of this info won't be printed in the page, it'll be in the symfony devtools.
+
+If we write in the console 'php bin/console server: dump' then symfony will dump everything (including ajax requests!) into the console
+
+------------- 10 -------------
+<link rel="stylesheet" href="{{ asset('css/app.css') }}">
+the asset() will prefix the path with what's necessary if we deploy the site to something that' s no a root directory. It also gives the ability to configure a global CDN
