@@ -56,8 +56,3 @@
     </ul>
 </div>
 {% endblock %}
-
-{% block javascripts %}
-   {{ parent() }} {# this will keep the original contents of javascripts block and won't overwrite it. The following code will just be added at the end of it. #}
-   <script src="{{ asset('js/question_show.js') }}"></script>
-{% endblock %}
