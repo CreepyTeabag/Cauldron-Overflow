@@ -42,3 +42,17 @@ If we write in the console 'php bin/console server: dump' then symfony will dump
 ------------- 10 -------------
 <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 the asset() will prefix the path with what's necessary if we deploy the site to something that' s no a root directory. It also gives the ability to configure a global CDN
+
+------------- 12 -------------
+
+/**
+   * @Route("/", name="app_homepage")
+   */
+app_homepage is a unique name that we can use in other places, like this:
+<a href="{{ path('app_homepage') }}">Link that will lead to / </a>
+
+------------- 14 -------------
+Adding {{ parent() }} inside a block in the child template will print its parent's content so that it doesn't get replaced!
+
+------------- 16 -------------
+In symfony service is an object that does some work.
